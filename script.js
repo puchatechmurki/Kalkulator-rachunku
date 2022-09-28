@@ -18,13 +18,13 @@ const showBill = () => {
 };
 
 const countBill = () => {
-    const newPrice = parseFloat(price.value);
-    const newPeople = parseInt(people.value);
+    const newPrice = parseFloat(price.value); //parseFloat - odpowiada zeby liczba byla po przecinku
+    const newPeople = parseInt(people.value); //parseInt - typ string zostanie przerobiony na liczbe
     const newTip = parseFloat(tip.value);
     const sum = (newPrice + (newPrice * newTip)) / newPeople;
 
     costInfo.style.display = 'block';
-    cost.textContent = sum.toFixed(2);
+    cost.textContent = sum.toFixed(2); //metoda toFixed zaookragla liczbe do wkazanej w nawiasie (w tym przypadku do 2 miejsc po przecinku czyli groszy)
 };
 
 
